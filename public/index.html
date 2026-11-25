@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My OpenAI Chatbot</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header>
+        <div>
+          <p class="eyebrow">YOUR AI ASSISTANT</p>
+          <h1>Chatbot</h1>
+        </div>
+        <button id="clear-chat" class="secondary" type="button">Clear chat</button>
+      </header>
+
+      <section id="messages" class="messages" aria-live="polite">
+        <article class="message assistant">
+          <p>Hi! I’m ready to help. Turn on web search when you want up-to-date information.</p>
+        </article>
+      </section>
+
+      <form id="chat-form" class="composer">
+        <label class="search-toggle">
+          <input id="web-search" type="checkbox" />
+          <span>Search the web for current answers</span>
+        </label>
+        <div class="input-row">
+          <textarea id="prompt" rows="1" maxlength="4000" placeholder="Ask anything…" required></textarea>
+          <button id="send" type="submit">Send</button>
+        </div>
+        <p id="status" class="status"></p>
+      </form>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>
